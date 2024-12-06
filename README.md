@@ -143,5 +143,19 @@ texto   IN      TXT     "Este es un registro de texto para asirfranco.com"
    ```
    dig @192.168.1.1 ejemplo.asirfranco.int
    ```  
+#### **Salida esperada:**  
+```
+; <<>> DiG 9.18.27 <<>> @192.168.1.1 ejemplo.asirfranco.int
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 59946
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
 
+;; QUERY SECTION:
+;ejemplo.asirfranco.int.	IN	A
+
+;; AUTHORITY SECTION:
+.			900	IN	SOA	a.root-servers.net. nstld.verisign-grs.com. 2024111201 1800 900 604800 86400
+```  
 

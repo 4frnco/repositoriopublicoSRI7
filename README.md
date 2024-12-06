@@ -121,4 +121,27 @@ texto   IN      TXT     "Este es un registro de texto para asirfranco.com"
 ```  
 
 ---
+### 5. Comprobación  
+
+1. Arrancamos el servidor con:  
+   ```
+   docker compose up -d
+   ```  
+
+2. Accedemos al cliente:  
+   ```
+   docker exec -it cliente_franco /bin/sh
+   ```  
+
+3. Instalamos herramientas en Alpine:  
+   ```
+   apk update
+   apk add --update bind-tools
+   ```  
+
+4. Realizamos una consulta DNS con `dig`:  
+   ```
+   dig @192.168.1.1 ejemplo.asirfranco.int
+   ```  
+
 

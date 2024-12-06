@@ -65,4 +65,38 @@ networks:
 
 ---
 
+### 3. Configuración de archivos  
+
+#### **1. Archivo `named.conf.local`**  
+```
+zone "asirfranco.int" {
+    type master;
+    file "/etc/bind/db.asirfranco.int";
+};
+```  
+
+#### **2. Archivo `named.conf.options`**  
+```
+options {
+    directory "/var/cache/bind";
+    recursion yes;
+    allow-query { any; };
+    dnssec-validation no;
+    forwarders {
+        8.8.8.8;
+        1.1.1.1;
+    };
+    listen-on { any; };
+    listen-on-v6 { any; };
+};
+```  
+
+#### **3. Archivo `named.conf`**  
+```
+include "/etc/bind/named.conf.options";
+include "/etc/bind/named.conf.local";
+```  
+
+---
+
 

@@ -100,3 +100,25 @@ include "/etc/bind/named.conf.local";
 ---
 
 
+### 4. Configuración de zonas DNS  
+
+#### **Archivo `db.asirfranco.int`**  
+```
+$TTL    604800
+
+@       IN      SOA     ns.asirfranco.int. admin.asirfranco.int. (
+                        1
+                        604800
+                        86400
+                        2419200
+                        604800 )
+
+@       IN      NS      ns.asirfranco.int.
+ns      IN      A       192.168.1.1
+test    IN      A       192.168.1.100
+alias   IN      CNAME   web.asirfranco.com.
+texto   IN      TXT     "Este es un registro de texto para asirfranco.com"
+```  
+
+---
+

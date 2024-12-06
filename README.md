@@ -9,7 +9,7 @@ P7-DNS_Linux
 ### 2. Configuración del archivo `docker-compose.yml`  
 
 #### Contenido del archivo:  
-```yaml
+```
 services:
   bind9:
     container_name: serverfranco
